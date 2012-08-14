@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/app.js"></script>
+		<style>
+			#code-input {
+				position: absolute;
+				top: 3em;
+				bottom: 1em;
+				left: 0;
+				width: 100%;
+			}
+			#error-cont {
+				position: absolute;
+				top: 3em;
+				right: 3em;
+				width: 10em;
+				padding: 1em;
+				display: block;
+				opacity: 0;
+				color: #fff;
+				background-color: rgba(0,0,0,0.5);
+				border-radius: 1.5em;
+				pointer-events: none;
+				-webkit-transition: opacity 0.5s ease-out;
+			}
+			iframe {
+				width: 0;
+				height: 0;
+				position: absolute;
+				bottom:0;
+				right: 0;
+			}
+			input, label {
+				display: inline;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input type="radio" name="selector" id="base64ScriptEval" checked="checked" /><label for="scriptEval">Script Eval</label>
+			<input type="radio" name="selector" id="iframeEval" /><label for="iframeEval">Iframe Eval</label>
+		</form>
+		<textarea id="code-input"></textarea>
+		<span id="error-cont"></span>
+	</body>
+</html>
